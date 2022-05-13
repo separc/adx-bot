@@ -11,6 +11,7 @@ MAX_OPEN_POSITIONS = 10
 FUNDS_USAGE = 0.9
 TF = 15 # Timeframe - always in minutes - Greater than 1 minute, less than 1 day.
 ADX_LENGTH = 14
+ADX_MINVAL = 25
 EMA_LENGTH = 20
 EMA_SMOOTHING = 3
 DEAL_BOT_RATIO_WARNING = 0.75
