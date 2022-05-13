@@ -360,10 +360,10 @@ while True:
             ADX_Slope = unfiltered_stats[2]
             DM_plus = unfiltered_stats[3]
             DM_minus = unfiltered_stats[4]
-            if ADX > 15 and (ADX_Slope > 0 and ((DM_plus > DM_minus and ADX > DM_minus) or (ADX < DM_plus and ADX < DM_minus))) and DM_plus > DM_minus and trend_direction == "up":
+            if ADX > config.ADX_MINVAL and (ADX_Slope > 0 and ((DM_plus > DM_minus and ADX > DM_minus) or (ADX < DM_plus and ADX < DM_minus))) and DM_plus > DM_minus and trend_direction == "up":
                 unfiltered_stats.append("long")
                 unsorted_tradable_perps.append(unfiltered_stats)
-            elif ADX > 15 and (ADX_Slope > 0 and ((DM_plus < DM_minus and ADX > DM_plus) or (ADX < DM_plus and ADX < DM_minus))) and DM_plus < DM_minus and trend_direction == "down":
+            elif ADX > config.ADX_MINVAL and (ADX_Slope > 0 and ((DM_plus < DM_minus and ADX > DM_plus) or (ADX < DM_plus and ADX < DM_minus))) and DM_plus < DM_minus and trend_direction == "down":
                 unfiltered_stats.append("short")
                 unsorted_tradable_perps.append(unfiltered_stats)
             elif ADX_Slope < 0:
